@@ -65,7 +65,7 @@ elif selector == "Kamera":
         nyalakan = st.checkbox('Buka Kamera')
         # if agree == True
         if nyalakan:
-                data = st.camera_input("Ambil sebuah gambar")
+                data = st.camera_input("Ambil sebuah gambar batik")
 
 elif selector == "Tentang Kami":
         st.header("Kelompok 5 dari Kelas Ibnu Sina")
