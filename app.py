@@ -66,7 +66,6 @@ if selector == "Beranda":
                 st.write("---")
                 left_column, right_column = st.columns(2)
                 with left_column:
-			st.write("##")
                         st.header("Halo! Ini adalah aplikasi Bathik")
 			st.write("##")
                         st.write("""
