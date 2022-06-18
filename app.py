@@ -67,7 +67,7 @@ if selector == "Beranda":
                 left_column, right_column = st.columns(2)
                 with left_column:
                         st.header("Halo! Ini adalah aplikasi Bathik")
-			st.write("##")
+			
                         st.write("""
                         Batik di Indonesia sangat beragam, karena Indonesia memiliki banyak pulau. Banyak wilayah-wilayah di Indonesia memiliki motif batiknya masing - masing. Kita sebagai masyarakat Indonesia penting untuk kita mengenal dan mengetahui motif dan asal batik - batik tersebut. 
                         Dengan adanya Aplikasi “Bathik.Id” membantu kita untuk mengenal batik-batik tersebut, dengan output yang memberitahu motif dan asal Batik yang ingin kita ketahui. 
