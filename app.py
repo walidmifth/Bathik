@@ -3,7 +3,17 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 from streamlit_option_menu import option_menu
+import requests
+from streamlit_lottie import st_lottie 
 
+def load_lottieurl(url):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
+# Perintilan
+lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
 
 
 # Ubah icon dan nama page tab
@@ -68,14 +78,22 @@ elif selector == "Kamera":
                 data = st.camera_input("Silakan Potret Sebuah Gambar Batik Anda di Sini")
 
 elif selector == "Tentang Kami":
-        st.header("Kelompok 5 dari Kelas Ibnu Sina")
-        st.markdown("""
-        Kasih Lidiya Br Nadeak,
-        Nyanyang Rian,
-        Rahayu Adha Putri,
-        Ramolo Berutu,
-        Walid Miftahuddin.
-        """)
+         with st.container():
+                st.write("---")
+                left_column, right_column = st.columns(2)
+                with left_column:
+                        st.header("Kami Adalah Kelompok 5 dari Kelas Ibnu Sina")
+                        st.write("##")
+                        st.write(
+                                """
+                                - Kasih Lidiya Br Nadeak,
+                                - Nyanyang Rian,
+                                - Rahayu Adha Putri,
+                                - Ramolo Berutu,
+                                - Walid Miftahuddin.
+                                """)
+                with right_column:
+                        st_lottie(lottie_coding, height=300, key="coding")
 try:
         st.image(data)
         
