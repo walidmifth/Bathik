@@ -62,8 +62,18 @@ selector = option_menu(None, ["Beranda", "Gambar",  "Kamera", 'Tentang Kami'],
 )
 
 if selector == "Beranda":
-        st.header("Halo! Ini adalah aplikasi Bathik")
-        # st.write("Batik merupakan...")
+        with st.container():
+                st.write("---")
+                left_column, right_column = st.columns(2)
+                with left_column:
+                        st.header("Halo! Ini adalah aplikasi Bathik")
+                        st.write("""
+                        Batik di Indonesia sangat beragam, karena Indonesia memiliki banyak pulau. Banyak wilayah-wilayah di Indonesia memiliki motif batiknya masing - masing. Kita sebagai masyarakat Indonesia penting untuk kita mengenal dan mengetahui motif dan asal batik - batik tersebut. 
+                        Dengan adanya Aplikasi “Bathik.Id” membantu kita untuk mengenal batik-batik tersebut, dengan output yang memberitahu motif dan asal Batik yang ingin kita ketahui. 
+                """)
+        with right_column:
+                img = Image.open('Batik_Beranda.jpg')
+                st.image(img, caption='Gambar Batik Bali')
 
 elif selector == "Gambar":
         data = st.file_uploader("Silakan Unggah Gambar Batik Anda", type=["jpg", "jpeg", "png"])
