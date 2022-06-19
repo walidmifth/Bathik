@@ -104,7 +104,11 @@ elif selector == "Tentang Kami":
                                 - Walid Miftahuddin.
                                 """)
                 with right_column:
-                        st_lottie(lottie_coding, height=300, key="coding")
+
+                        img2 = Image.open('Batik_Beranda.jpg')
+                        st.image(img2, caption="Anggota Kelompok 5"
+ 
+
 try:
         st.image(data)
         
