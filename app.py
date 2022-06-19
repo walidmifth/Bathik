@@ -106,7 +106,7 @@ elif selector == "Tentang Kami":
                 with right_column:
 
                         img2 = Image.open('Batik_Beranda.jpg')
-                        st.image(img2, caption="Anggota Kelompok 5"
+                        st.image(img2, caption='Anggota Kelompok 5')
  
 
 try:
